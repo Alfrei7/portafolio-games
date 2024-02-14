@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="ahorcadoStyles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Juego del Ahorcado</h1>
+        <div id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="container">
+    <div class="hangman-container">
+        <div id="hangman">
+            <div class="hangman-part head"></div>
+            <div class="hangman-part body"></div>
+            <div class="hangman-part left-arm"></div>
+            <div class="hangman-part right-arm"></div>
+            <div class="hangman-part left-leg"></div>
+            <div class="hangman-part right-leg"></div>
+        </div>
+        <div>
+            <p id="message"></p>
+            <div>
+                <input type="text" id="word-input" placeholder="Ingresa la palabra a adivinar">
+                <button id="start">Comenzar Juego</button>
+                <button id="restart">Reiniciar Juego</button>
+            </div>
+            <p id="word"></p>
+            <div>
+                <p>Letras Adivinadas: <span id="guessed-letters"></span></p>
+                <p>Letras Incorrectas: <span id="incorrect-letters"></span></p>
+            </div>
+            <input type="text" id="letter-input" placeholder="Adivina una letra">
+            <button id="guess-btn">Adivinar</button>
+        </div>
+    </div>
+</div>
+<p id="success-message"></p>
+
+<script src="scriptsAhorcado.js"></script>
+</body>
+</html>

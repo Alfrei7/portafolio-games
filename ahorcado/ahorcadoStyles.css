@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b9d7d9;
+    color: #626266;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #2a2829;
+    color: #faf4b1;
+    padding: 10px 0;
+    border-radius: 10px; /* Agregar borde redondeado */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2a2829;
+    width: 100%;
+    display: none;
+    z-index: 100;
+}
+
+.nav-menu.show {
+    display: block;
+}
+
+#menu-icon {
+    cursor: pointer;
+}
+
+#menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #faf4b1;
+    margin: 5px;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #faf4b1;
+    text-decoration: none;
+}
+
+.hangman-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 50px; /* Añadir margen superior */
+}
+
+.hangman-part {
+    display: none;
+    width: 5px;
+    height: 100px;
+    background-color: #626266;
+    margin: 10px;
+    transition: height 0.5s, opacity 0.5s;
+    opacity: 0;
+}
+
+.hangman-part.show {
+    display: block;
+    opacity: 1;
+    height: 100px;
+}
+
+input[type="text"],
+button {
+    margin-top: 10px;
+}
+
+#word {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#guesses {
+    margin-bottom: 20px;
+}
+
+#letter-input {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#start,
+#restart {
+    padding: 10px 20px;
+    background-color: #493736;
+    color: #faf4b1;
+    border: none;
+    cursor: pointer;
+}
+
+#guess-btn {
+    padding: 10px 20px;
+    background-color: #493736;
+    color: #faf4b1;
+    border: none;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu.show-menu {
+        display: flex;
+    }
+}

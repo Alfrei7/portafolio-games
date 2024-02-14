@@ -1,0 +1,93 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f0f0f0; /* Cambiamos el color de fondo del cuerpo */
+    color: #333; /* Cambiamos el color del texto */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(16, 188, 231, 0.2);
+}
+
+h1 {
+    margin: 0;
+    color: #fff; /* Cambiamos el color del título del encabezado */
+}
+
+.portfolio-btn {
+    background-color: #BB4430;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.portfolio-btn:hover {
+    background-color: #7EBDC2;
+}
+
+.game-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-box {
+    width: 25%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    transition: box-shadow 0.3s; /* Agregamos transición para el sombreado */
+}
+
+.game-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Cambiamos el sombreado al pasar el ratón sobre la caja */
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 150px;
+}
+
+.carousel img {
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+
+.carousel img:first-child {
+    display: block;
+}
+
+.play-btn {
+    display: inline-block;
+    background-color: #BB4430;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.play-btn:hover {
+    background-color: #7EBDC2;
+}
