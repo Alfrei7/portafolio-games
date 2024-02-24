@@ -8,8 +8,44 @@ body {
     background-color: #182028;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+   
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: top;
+    margin-right: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+}
+
+.portfolio-btn {
+    background-color: #BB4430;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.portfolio-btn:hover {
+    background-color: #7EBDC2;
+}
+
 .game-container {
     position: relative;
+    margin-top: 20px; /* Ajusta el espacio entre el encabezado y el juego */
 }
 
 canvas {
@@ -56,4 +92,21 @@ canvas {
     to {
         opacity: 1;
     }
+}
+
+#scoreText {
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #61C14E;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#scoreText:hover {
+    background-color: #4CAF50;
 }

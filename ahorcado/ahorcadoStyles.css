@@ -6,87 +6,101 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #b9d7d9;
-    color: #626266;
+    background-color: #f0f0f0; /* Cambiar el color de fondo */
+    color: #333; /* Cambiar el color del texto */
+}
+
+/* Ajustar el header */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #f0f0f0;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
-header {
-    background-color: #2a2829;
-    color: #faf4b1;
-    padding: 10px 0;
-    border-radius: 10px; /* Agregar borde redondeado */
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #2a2829;
-    width: 100%;
-    display: none;
-    z-index: 100;
-}
-
-.nav-menu.show {
-    display: block;
-}
-
-#menu-icon {
+.portfolio-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
     cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none; /* Eliminamos la decoración de enlace */
 }
 
-#menu-icon span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #faf4b1;
-    margin: 5px;
+.portfolio-btn:hover {
+    background-color: #7EBDC2;
 }
 
-h1 {
-    margin: 0;
+/* Estilizar el botón de dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.dropbtn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px; /* Separación entre el título y el botón */
 }
 
-nav li {
-    margin-right: 20px;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Cambiar el color de fondo */
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px; /* Ajustar la separación entre el botón y el contenido del dropdown */
 }
 
-nav a {
-    color: #faf4b1;
+.dropdown-content a {
+    color: white; /* Cambiar el color del texto */
+    padding: 12px 16px;
     text-decoration: none;
+    display: block;
 }
 
+.dropdown-content a:hover {
+    background-color: #555; /* Cambiar el color de fondo al pasar el ratón sobre los enlaces */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #7EBDC2;
+}
+
+/* Centrar y separar el contenido del juego */
 .hangman-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-top: 50px; /* Añadir margen superior */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.hangman-container > div {
+    margin-top: 20px;
 }
 
 .hangman-part {
     display: none;
     width: 5px;
     height: 100px;
-    background-color: #626266;
+    background-color: #333; /* Cambiar el color de las partes del ahorcado */
     margin: 10px;
     transition: height 0.5s, opacity 0.5s;
     opacity: 0;
@@ -101,6 +115,22 @@ nav a {
 input[type="text"],
 button {
     margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Agregar borde redondeado */
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#start,
+#restart,
+#guess-btn {
+    background-color: #BB4430; /* Cambiar el color de fondo de los botones */
+    color: #fff; /* Cambiar el color del texto de los botones */
 }
 
 #word {
@@ -108,51 +138,10 @@ button {
     font-size: 24px;
 }
 
-#guesses {
+#guesses p {
     margin-bottom: 20px;
-}
-
-#letter-input {
-    padding: 10px;
-    margin-right: 10px;
-}
-
-#start,
-#restart {
-    padding: 10px 20px;
-    background-color: #493736;
-    color: #faf4b1;
-    border: none;
-    cursor: pointer;
-}
-
-#guess-btn {
-    padding: 10px 20px;
-    background-color: #493736;
-    color: #faf4b1;
-    border: none;
-    cursor: pointer;
 }
 
 #message {
     margin-top: 10px;
-}
-
-@media screen and (max-width: 700px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu {
-        display: none;
-        flex-direction: column;
-    }
-
-    .menu.show-menu {
-        display: flex;
-    }
 }

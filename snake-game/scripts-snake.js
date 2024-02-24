@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let fruit;
     let gameOver = false;
 
-    (function setup() {
+    function setup() {
         snake = new Snake();
         fruit = new Fruit();
         fruit.pickLocation();
@@ -22,15 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 snake.update();
                 snake.draw();
 
-                if (snake.eat(fruit)) {
-                    fruit.pickLocation();
-                }
-
                 snake.checkCollision();
-                document.querySelector(".score").innerText = snake.total;
             }
         }, 100);
-    })();
+    }
+
+    setup();
 
     window.addEventListener("keydown", (event) => {
         const direction = event.key.replace("Arrow", "");
@@ -87,6 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (this.y < 0) {
                 this.y = canvas.height - scale;
+            }
+
+            // Actualizar la puntuación cuando la serpiente come una fruta
+            if (this.eat(fruit)) {
+                fruit.pickLocation(); // Elige una nueva ubicación para la fruta
             }
         };
 

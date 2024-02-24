@@ -1,27 +1,24 @@
+/* Estilos de cuerpo y tipografía */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: #f0f0f0; /* Cambiamos el color de fondo del cuerpo */
-    color: #333; /* Cambiamos el color del texto */
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
+/* Estilos del encabezado */
 header {
     padding: 20px;
     text-align: center;
-    background-color: #000000;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(16, 188, 231, 0.2);
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
     margin: 0;
-    color: #fff; /* Cambiamos el color del título del encabezado */
+    margin-bottom: 10px;
+    color: #fff;
 }
 
 .portfolio-btn {
@@ -38,31 +35,36 @@ h1 {
     background-color: #7EBDC2;
 }
 
+/* Estilos de la sección de juegos */
 .game-section {
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
+/* Estilos de las cajas de juego */
 .game-box {
-    width: 25%;
+    width: 300px;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgb(0, 0, 0);
-    transition: box-shadow 0.3s; /* Agregamos transición para el sombreado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    margin-bottom: 30px;
 }
 
 .game-box:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Cambiamos el sombreado al pasar el ratón sobre la caja */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos del carrusel de imágenes */
 .carousel {
     position: relative;
     overflow: hidden;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     height: 150px;
 }
 
@@ -76,6 +78,7 @@ h1 {
     display: block;
 }
 
+/* Estilos del botón de juego */
 .play-btn {
     display: inline-block;
     background-color: #BB4430;
